@@ -8,12 +8,24 @@
 }
 
 .itemButton {
-  display: block !important;
+  display: flex !important;
+  align-items: center;
   padding: 1.5rem 1.5rem !important;
   width: 100%;
   cursor: pointer;
 
   &:hover {
     background: #f5f5f5;
+  }
+}
+
+.icon {
+  display: flex;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-right: 0.5rem;
+
+  svg {
+    height: 100%;
   }
 }
