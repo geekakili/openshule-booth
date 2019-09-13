@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "createdAt": "2019-09-13T11:00:40.87444+03:00",
+    "updatedAt": "2019-09-13T11:00:40.87444+03:00",
+    "deletedAt": null,
+    "name": "subject "
+  },
+  {
+    "id": 2,
+    "createdAt": "2019-09-13T11:13:54.260618+03:00",
+    "updatedAt": "2019-09-13T11:13:54.260618+03:00",
+    "deletedAt": null,
+    "name": "julius2"
+  }
+]
