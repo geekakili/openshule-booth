@@ -1,0 +1,14 @@
+.appLayout {
+  display: flex;
+}
+
+.sidebar {
+  flex: 0 0 28rem;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.content {
+  flex: 1;
+  padding: 2rem;
+}
