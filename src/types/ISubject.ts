@@ -1,5 +1,5 @@
 export interface ISubject {
-  id: string;
+  id: number;
   createdAt: string;
   updatedAt: string;
   deletedAt?: string;
