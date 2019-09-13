@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import subjects from "./fixtures/subjects.json";
 import AppLayout from "./common/layout/AppLayout/AppLayout";
@@ -7,14 +7,20 @@ import SidebarTitle from "./common/branding/SidebarTitle";
 import SubjectContent from "./subjectDetails/SubjectContent/SubjectContent";
 
 const App = () => {
+  const [subjectId, setSubjectId] = useState(1);
+
+  const onItemClick = subjectId => {
+    return () => setSubjectId(subjectId);
+  };
+
   return (
     <AppLayout>
       <AppLayout.Sidebar>
         <SidebarTitle />
-        <SubjectList subjects={subjects} />
+        <SubjectList onItemClick={onItemClick} subjects={subjects} />
       </AppLayout.Sidebar>
       <AppLayout.Content>
-        <SubjectContent subjectId={1} />
+        <SubjectContent subjectId={subjectId} />
       </AppLayout.Content>
     </AppLayout>
   );

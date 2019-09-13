@@ -6,13 +6,16 @@ import SubjectListItem from "./SubjectListItem";
 
 interface IProps {
   subjects: ISubject[];
+  onItemClick?: Function;
 }
 
-const SubjectList: FunctionComponent<IProps> = ({ subjects }) => {
+const SubjectList: FunctionComponent<IProps> = ({ subjects, onItemClick }) => {
   return (
     <ul className={styles.list}>
       {subjects.map(subject => (
-        <SubjectListItem key={subject.id}>{subject.name}</SubjectListItem>
+        <SubjectListItem onClick={onItemClick(subject.id)} key={subject.id}>
+          {subject.name}
+        </SubjectListItem>
       ))}
     </ul>
   );
